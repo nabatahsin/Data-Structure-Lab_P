@@ -1,0 +1,77 @@
+#include<iostream>
+using namespace std;
+
+
+int main ()
+{
+int i, j,temp,low,high,mid,num;
+
+int a[10] = {8,4,6,1,6,9,6,1,9,8};
+
+cout <<"ARRAY : " ;
+
+for(i = 0; i<10; i++) {
+cout <<a[i]<<"\t";
+}
+
+cout<<endl;
+cout<<endl;
+for(i = 0; i<10; i++)
+{
+for(j = i+1; j<10; j++)
+{
+if(a[j] < a[i]) {
+temp = a[i];
+a[i] = a[j];
+a[j] = temp;
+}
+}
+
+}
+cout <<"Sorted array : ";
+for(i = 0; i<10; i++) {
+cout <<a[i]<<"\t";
+}
+cout<<endl;
+cout<<endl;
+
+
+// Binary search
+
+
+low=0;
+high= i-1;
+
+
+cout<<"search : " ;
+cin>>num;
+
+while(low<=high)
+{
+mid=( low+high )/2;
+if(a[mid]==num){
+
+cout<<"Element is founded at inbox :"<< (mid+1) ;
+cout<<endl;
+cout<<endl;
+return 0;
+}
+
+else if (num > a[mid]){
+low=mid+1;
+}
+
+else if(num<a[mid])
+{
+high=mid-1;
+}
+mid=( low+high )/2;
+}
+
+cout<<"number is not found"<<endl;
+
+return 0;
+
+
+
+}

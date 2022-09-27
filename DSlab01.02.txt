@@ -1,0 +1,34 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int a, b, i, j;
+    cout << "please enter first array size:";
+    cin >> a;
+    int array_1[a];
+    cout << "first array element ";
+    for (i = 0; i < a; i++)
+    {
+        cin >> array_1[i];
+    }
+    cout << "please enter second array size:";
+    cin >> b;
+    int array_2[b];
+    cout << "second array element";
+    for (i = 0; i < b; i++)
+    {
+        cin >> array_2[i];
+    }
+    cout << "common element of two array";
+    for (i = 0; i < a; i++)
+    {
+        for (j = 0; j < b; j++)
+        {
+            if (array_1[i] == array_2[j])
+            {
+                cout << array_1[i];
+            }
+        }
+    }
+    return 0;
+}
